@@ -1,0 +1,14 @@
+
+ kind create cluster --config cluster.yml --name giropops
+ kubectl get pods
+ kubectl cluster-info --context kind-giropops
+ kubectl get pods -n kube-system
+ kubectl get pods -n kube-system -o wide
+ kubectl get pods -A
+ kubectl get deployment
+ kubectl get service
+ kubectl get replicaset
+ kubectl run --image nginx --port 80 giropops
+ kubectl exec -ti giropops -- bash
+ kubectl expose pods giropops                                       #criar serviço
+ kubectl expose pods giropops --type NodePort                       #criar serviço do tipo NodePort
