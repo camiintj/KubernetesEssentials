@@ -12,3 +12,12 @@
  kubectl exec -ti giropops -- bash
  kubectl expose pods giropops                                       #criar serviço
  kubectl expose pods giropops --type NodePort                       #criar serviço do tipo NodePort
+ kubectl describe pods giropops
+ kubectl get pods giropops -o yaml
+ kubectl get pods
+ kubectl delete pods giropops
+ kubectl run strigus --image nginx --port 80
+ kubectl get pods -o wide                                           # traz um output com mais infos
+ kubectl attach girus -c girus -i -t
+ kubectl apply -f pod-emptydir.yaml
+ kubectl exec -ti giropops -- bash
